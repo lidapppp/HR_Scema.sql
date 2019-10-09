@@ -1,2 +1,6 @@
 # Kuliaaah
-Materi Dan Tugas
+.
+├── {semester}
+│   └── {matkul}
+│       └── source
+└── README.md
