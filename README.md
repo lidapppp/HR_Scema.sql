@@ -2,8 +2,6 @@
 
 Materi Dan Tugas
 
-Include source code dan tugas
-
 ```
 .
 ├── {semester}
