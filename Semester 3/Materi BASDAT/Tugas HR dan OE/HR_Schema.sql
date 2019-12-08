@@ -1,7 +1,7 @@
 CREATE TABLE pegawai (
 	id_pegawai NUMBER(6,0),
 	nama_depan VARCHAR2(20),
-	nama_belakang CONSTRAINT peg_nama_blk_nn NOT NULL,
+	nama_belakang VARCHAR2(20) CONSTRAINT peg_nama_blk_nn NOT NULL,
 	email VARCHAR2(25) CONSTRAINT peg_email_nn NOT NULL,
 	no_telepon VARCHAR(20),
 	tanggal_diterima DATE CONSTRAINT peg_tgl_diterima_nn NOT NULL,
