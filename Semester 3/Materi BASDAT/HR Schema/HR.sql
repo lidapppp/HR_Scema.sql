@@ -1,5 +1,5 @@
 CREATE TABLE adalah perintah yang digunakan untuk membuat sebuah table di database mysql.
-ALTER TABLE adalah perintah di database MySQL untuk merubah struktur table baik itu merubah nama table, merubah nama kolom, merubah tipe data, dan lain-lain.
+ALTER TABLE adalah perintah di database mysql untuk merubah struktur table baik itu merubah nama table, merubah nama kolom, merubah tipe data, dan lain-lain.
 CONSTRAINT adalah perintah untuk membuat batasan atau aturan yang ada pada table.
 ==============================================================================================================================================================
 CREATE TABLE pegawai (
@@ -66,7 +66,7 @@ CREATE TABLE daerah (
 	CONSTRAINT id_daerah_pk PRIMARY KEY (id_daerah)
 );
 =========================================================================
-ALTER TABLE negara ADD CONSTRAINT wil_neg_fk FOREIGN KEY (id_daerah)
+ALTER TABLE negara ADD CONSTRAINT dae_neg_fk FOREIGN KEY (id_daerah)
 REFERENCES daerah (id_daerah);
 =========================================================================
 ALTER TABLE lokasi ADD CONSTRAINT lok_id_fk FOREIGN KEY (id_negara)
