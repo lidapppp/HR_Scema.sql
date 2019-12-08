@@ -1,10 +1,22 @@
+CREATE TABLE adalah perintah yang digunakan untuk membuat sebuah table di database mysql.
+ALTER TABLE adalah perintah di database MySQL untuk merubah struktur table baik itu merubah nama table, merubah nama kolom, merubah tipe data, dan lain-lain.
+CREATE INDEX  adalah perintah di mysql unutuk membuat sebuah objek dalam sistem database yang dapat mempercepat proses pencarian (query) data. 
+CONSTRAINT adalah perintah untuk membuat batasan atau aturan yang ada pada table.
+
+
+
+
+
+
+
+
 CREATE TABLE  "DAERAH" 
    (	"DAERAH_ID" NUMBER CONSTRAINT "DAERAH_ID_NN" NOT NULL ENABLE, 
 	"DAERAH_NAMA" VARCHAR2(25), 
 	 CONSTRAINT "DAE_ID_PK" PRIMARY KEY ("DAERAH_ID")
   USING INDEX  ENABLE
    )
-/
+   /
 ======================================================================
 CREATE TABLE  "NEGARA" 
    (	"NEGARA_ID" CHAR(2) CONSTRAINT "NEGARA_ID_NN" NOT NULL ENABLE, 
@@ -16,7 +28,7 @@ CREATE TABLE  "NEGARA"
 /
 ALTER TABLE  "NEGARA" ADD CONSTRAINT "NEG_DAE_FK" FOREIGN KEY ("DAERAH_ID")
 	  REFERENCES  "DAERAH" ("DAERAH_ID") ENABLE
-/
+/ 
 ==========================================================================
 CREATE TABLE  "LOKASI" 
    (	"LOKASI_ID" NUMBER(4,0), 
