@@ -3,7 +3,7 @@ ALTER TABLE adalah perintah di database mysql untuk merubah struktur table baik 
 CONSTRAINT adalah perintah untuk membuat batasan atau aturan yang ada pada table.
 ==============================================================================================================================================================
 CREATE TABLE pegawai (
-	id_pegawai NUMBER(6,0),
+	id_pegawai NUMBER(6),
 	nama_depan VARCHAR2(20),
 	nama_belakang VARCHAR2(20) CONSTRAINT peg_nama_blk_nn NOT NULL,
 	email VARCHAR2(25) CONSTRAINT peg_email_nn NOT NULL,
@@ -16,35 +16,35 @@ CREATE TABLE pegawai (
 	id_departemen NUMBER(4,0),
 	BONUS VARCHAR2(5),
 	CONSTRAINT peg_id_pegawai_pk PRIMARY KEY (id_pegawai)
-)
+);
 ========================================================================
 CREATE TABLE departemen (
-	id_departemen NUMBER(4,0),
+	id_departemen NUMBER(4),
 	nama_departemen VARCHAR2(30) CONSTRAINT dep_nama_depart_nn NOT NULL,
-	id_manager NUMBER(6,0),
-	id_lokasi NUMBER(4,0),
+	id_manager NUMBER(6),
+	id_lokasi NUMBER(4),
 	CONSTRAINT id_depat_pk PRIMARY KEY (id_departemen)	
 );
 =========================================================================
 CREATE TABLE pekerjaan (
 	id_pekerjaan VARCHAR2(10),
 	jabatan VARCHAR2(35) CONSTRAINT jabatan_nn NOT NULL,
-	gaji_min NUMBER(6,0),
-	gaji_max NUMBER(6,0),
+	gaji_min NUMBER(6),
+	gaji_max NUMBER(6),
 	CONSTRAINT id_pekerjaan_pk PRIMARY KEY (id_pekerjaan)
 );
 =========================================================================
 CREATE TABLE riwayat_pekerjaan (
-	id_pegawai NUMBER(6,0) CONSTRAINT riw_pegawai_nn NOT NULL,
+	id_pegawai NUMBER(6) CONSTRAINT riw_pegawai_nn NOT NULL,
 	tanggal_mulai DATE CONSTRAINT riw_tgl_mulai_nn NOT NULL,
 	tanggal_selesai DATE CONSTRAINT riw_tgl_selesai_nn NOT NULL,
 	id_pekerjaan VARCHAR2(10) CONSTRAINT riw_pekerjaan_nn NOT NULL,
-	id_departemen NUMBER(4,0),
+	id_departemen NUMBER(4),
 	CONSTRAINT riw_id_peg_tgl_mulai_pk PRIMARY KEY (id_pegawai, tanggal_mulai)
 );
 ========================================================================
 CREATE TABLE lokasi (
-	id_lokasi NUMBER(4,0),
+	id_lokasi NUMBER(4),
 	nama_jalan VARCHAR2(40),
 	kode_pos VARCHAR2(12),
 	kota VARCHAR2(30) CONSTRAINT kota_nn NOT NULL,
